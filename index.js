@@ -9,7 +9,7 @@ const bodyParser=require("body-parser")
 
 const app= express()
 
-const PORT= 4000;
+const PORT=process.env.PORT || 4000;
 dotEnv.config()
 
 
@@ -35,6 +35,6 @@ app.listen(PORT,()=>{
     console.log(`serverside stared and running at ${PORT}`)
  })
 
-  app.use('/home',(req,resp)=>{
+  app.use('/',(req,resp)=>{
    resp.send("<h1>Welcome to SHARE FOOD</h1>")
   })
