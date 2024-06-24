@@ -5,15 +5,15 @@ const vendorrouter1=require('./routers/vendorrouter1')
 const bodyParser=require("body-parser")
   const firmrouters=require("./routers/firmrouters")
  const  productrout=require("./routers/productrout")
- const path=require("path")
-  const cors=require('cors')
+
+ const cors=require('cors')
 
 const app= express()
 
 
 const PORT=process.env.PORT || 4000;
 dotEnv.config()
-app.use(cors)
+app.use(cors())
 
 
 mongoose.connect(process.env.MONGO_URL)
@@ -25,10 +25,6 @@ app.use("/vendor",vendorrouter1)
 app.use("/firm",firmrouters)
  app.use("/product",productrout)
  app.use("/uploads",express.static('uploads'))
-
-
-
-
 
 
 
