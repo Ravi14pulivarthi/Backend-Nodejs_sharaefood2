@@ -22,7 +22,7 @@ const mongoose=require('mongoose')
         type:String
     },
     bestseller:{
-        type:String
+        type:Boolean
     },
     description:{
         type:String
