@@ -16,7 +16,7 @@ const storage = multer.diskStorage({
    
   const upload=multer({storage:storage})
 
-
+// addproduct
 
    const addProduct=async(req,resp)=>{
    try{
@@ -47,6 +47,9 @@ if( !firm){
     }
 
    }
+
+   // getProductByFirm
+   
     const getProductByFirm=async(req,resp)=>{
          try{
             const firmId=req.params.firmId
