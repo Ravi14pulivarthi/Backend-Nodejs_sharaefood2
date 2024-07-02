@@ -63,7 +63,9 @@ const vendorLogin= async(req,resp)=>{
      const getAllvendors=async(req,resp)=>{
       try{
          const vendors=await Vendor.find().populate('firm')
+         
        resp.json({vendors})
+    
         }
         
         catch(error){

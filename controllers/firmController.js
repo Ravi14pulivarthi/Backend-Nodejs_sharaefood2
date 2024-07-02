@@ -20,9 +20,9 @@ const storage = multer.diskStorage({
  
  const addFirm=async(req,resp)=>{
     try{
-    const {firmName,area,category,region,offer}=req.body
-   
-    const image=req.file? req.file.filename:undefined
+    const {firmName,area,category,region,offer,image}=req.body
+   console.log(image)
+   //  const image=req.file? req.file.filename:undefined
     
     const vendor=await Vendor.findById(req.vendorId)
      

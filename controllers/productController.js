@@ -20,8 +20,8 @@ const storage = multer.diskStorage({
 
    const addProduct=async(req,resp)=>{
    try{
-    const{productName,price,category,bestseller,description}=req.body
-    const image=req.file? req.file.filename:undefined;
+    const{productName,price,category,bestseller,description,image}=req.body
+   //  const image=req.file? req.file.filename:undefined;
     
     
     const firmId= req.params.firmId;
